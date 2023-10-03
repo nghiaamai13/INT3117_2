@@ -8,6 +8,9 @@ class TestBMICalculator(unittest.TestCase):
     def test_invalid(self):
         self.assertEqual(calculate_bmi(70, 0.99), -1)
 
+    def test_valid_height_weight_underweight_bmi(self):
+        self.assertEqual(calculate_bmi(40, 1.75), "Underweight")
+
     def test_valid_height_weight_normal_bmi(self):
         self.assertEqual(calculate_bmi(70, 1.75), "Normal")
 
